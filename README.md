@@ -5,8 +5,6 @@ search, view details, add tickets to a booking, pay (simulated), and manage book
 wishlist, all with a persistent per-user account. It's built with plain HTML/CSS/JS (no
 framework, no build step, no backend) so it's easy to read, fork, and extend.
 
-**Live demo:** https://suriyavr.github.io/Eventra/
-
 ## ✨ Features
 
 - **Browse & discover** — featured/popular events on the homepage, category shortcuts
