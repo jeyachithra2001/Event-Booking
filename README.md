@@ -1,27 +1,5 @@
 # Eventra
 
-<<<<<<< HEAD
-Open `pages/index.html` (or run any static server in this folder, e.g. `python -m http.server`).
-First visit → **Sign up**. After that → **Log in** (or Sign up again for a new person).
-
-```
-Event-Booking/
-├── assets/  icons/ images/ logos/
-├── css/     index, explore-events, event-details, payment, booking-confirmation, my-bookings, wishlist, auth
-├── js/      common (shared), data (events), auth, + one file per page
-├── pages/   index, explore-events, event-details, payment, booking-confirmation, my-bookings, wishlist, login, signup
-└── download-images.py
-```
-
-## Photos
-`assets/images/` ships with generated placeholder pictures. Run `python download-images.py`
-(needs internet) to replace them with the real photos — same file names, no code changes.
-To use your own picture for an event, save it over the file with the same name
-(`<event-id>.jpg` = cover, `<event-id>-2.jpg`, `-3.jpg` … = gallery).
-
-## Notes
-Accounts, wishlists and bookings are stored in the browser's localStorage (front-end demo only).
-=======
 Eventra is a front-end event-discovery and ticket-booking demo — browse events, filter and
 search, view details, add tickets to a booking, pay (simulated), and manage bookings and a
 wishlist, all with a persistent per-user account. It's built with plain HTML/CSS/JS (no
@@ -49,6 +27,16 @@ Data (11 sample events across 6 categories) lives in `js/data.js`; accounts, wis
 bookings are stored in the browser's `localStorage` (this is a front-end demo only — there is
 no real backend, payment processor, or database).
 
+## 🚀 Getting started
+
+No install step — it's static HTML.
+
+```bash
+git clone https://github.com/suriyavr/Eventra.git
+cd Eventra
+python -m http.server        # or any static file server
+```
+
 Then open `http://localhost:8000/pages/index.html` (or just double-click `pages/index.html`
 to open it straight from disk). First visit → **Sign up**. After that → **Log in** (or sign up
 again to try a second account).
@@ -69,20 +57,15 @@ Eventra/
 │   └── *.js        one file per page (index, explore-events, event-details, payment, …)
 ├── pages/          index, explore-events, event-details, payment, booking-confirmation,
 │                   my-bookings, wishlist, login, signup
+└── index.html      redirects to pages/index.html (so GitHub Pages lands on the real site)
 ```
 
 ## 🖼 Photos
 
 `assets/images/` ships with generated placeholder pictures (gradient blocks with a
-"replace with a real photo" label). Run:
-
-
-(needs an internet connection) to replace them with real, free-to-use Unsplash photos —
-same file names, no code changes needed, just refresh the page. See `PHOTO-FIXES.md` for
-what was fixed in that script and how to swap in your own photo for any event.
-
-To use your own picture for an event instead, just save a `.jpg` over the file with the
-matching name (`<event-id>.jpg` = cover photo, `<event-id>-2.jpg`, `-3.jpg` … = gallery).
+"replace with a real photo" label). To use your own picture for an event, save a `.jpg`
+over the file with the matching name (`<event-id>.jpg` = cover photo, `<event-id>-2.jpg`,
+`-3.jpg` … = gallery).
 
 ## ⚠️ Notes & limitations
 
@@ -90,5 +73,4 @@ matching name (`<event-id>.jpg` = cover photo, `<event-id>-2.jpg`, `-3.jpg` … 
   browser's `localStorage`, not a real database — clearing browser data clears everything.
 - Payment is **simulated**; no real payment processor is involved and no money moves.
 - Not intended for production use as-is — there's no server-side validation, real auth, or
-  persistence beyond the browser it's opened in.
->>>>>>> 31629dd16eabf8562f418d6198e1a70c68ac4209
+  persistence beyond the browser it's opened in.git add README.md
